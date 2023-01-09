@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673290516 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\stackarraywordreverse\main.c
+	<stdio.h>
+	<stdlib.h>
+	"StackArray.h"
+
+1673290216 c:\users\chari\documents\c\c-data-structures-and-algorithms\stackarraywordreverse\stackarray.h
+
