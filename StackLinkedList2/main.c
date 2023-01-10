@@ -4,10 +4,7 @@
 
 void main()
 {
-    push(2);
-    push(3);
-    push(10);
-    display();
-    pop();
-    display();
+    push(1,2);
+    push(2,3);
+    pop(1,2);
 }

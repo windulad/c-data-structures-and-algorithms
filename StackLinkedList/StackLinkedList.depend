@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673365821 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\stacklinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"StackLinkedList.h"
+
+1673368192 c:\users\chari\documents\c\c-data-structures-and-algorithms\stacklinkedlist\stacklinkedlist.h
+
