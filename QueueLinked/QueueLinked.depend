@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673468904 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\queuelinked\main.c
+	<stdio.h>
+	<stdlib.h>
+	"QueueLinked.h"
+
+1673468930 c:\users\chari\documents\c\c-data-structures-and-algorithms\queuelinked\queuelinked.h
+

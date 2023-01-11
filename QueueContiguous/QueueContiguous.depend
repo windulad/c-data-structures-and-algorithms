@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673406354 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\queuecontiguous\main.c
+	<stdio.h>
+	<stdlib.h>
+	"QueueContiguous.h"
+
+1673406393 c:\users\chari\documents\c\c-data-structures-and-algorithms\queuecontiguous\queuecontiguous.h
+
