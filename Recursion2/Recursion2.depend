@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1673551208 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\recursion2\main.c
+	<stdio.h>
+	<stdlib.h>
+
