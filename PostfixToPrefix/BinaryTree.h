@@ -1,25 +1,27 @@
 #ifndef BINARYTREE_H_INCLUDED
 #define BINARYTREE_H_INCLUDED
+#include "Stack.h"
 
-//define a node
-struct node{
-    int data;                   //store value of node
-    struct node *left, *right;          //store addresses of left child and right child
+struct root{
+    int data;
+    struct root *left, *right;
 };
 
 //create a binary tree
-struct node *create(int x){
-    struct node *newnode;
-    newnode = (struct node *)malloc(sizeof(struct node));
-    if(x == -1){            //no left or right child available
-        return 0;
-    }else{
-        newnode -> data = x;            //store value of node in newnode
-        newnode -> left = create();     //store addresses of left child
-        newnode -> right = create();        //store addresses of right child
-        return newnode;
-    }
-
+struct root *createroot(char data_root, char data_right, char data_left){
+    struct root *rootnode;
+    rootnode = (struct root *)malloc(sizeof(struct root));
+    rootnode -> data = data_root;                        //store value of root
+    rootnode -> left = createroot(0, data_left, 0);     //store value of left child
+    rootnode -> right = createroot(0, data_right, 0);        //store value of right child
+    return rootnode;
 };
+
+void print_prefix(struct root *tree)
+{
+    printf("%d\n",tree -> data);
+	print_prefix(tree -> left);
+	print_prefix(tree -> right);
+}
 
 #endif // BINARYTREE_H_INCLUDED

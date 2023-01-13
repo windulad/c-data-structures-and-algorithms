@@ -1,5 +1,14 @@
 # depslib dependency file v1.0
-1673570837 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\postfixtoprefix\main.c
+1673629489 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\postfixtoprefix\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	"Stack.h"
+	"BinaryTree.h"
+
+1673629276 c:\users\chari\documents\c\c-data-structures-and-algorithms\postfixtoprefix\stack.h
+	"BinaryTree.h"
+
+1673627232 c:\users\chari\documents\c\c-data-structures-and-algorithms\postfixtoprefix\binarytree.h
+	"Stack.h"
 

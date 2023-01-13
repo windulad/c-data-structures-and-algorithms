@@ -1,49 +1,70 @@
 #ifndef STACK_H_INCLUDED
 #define STACK_H_INCLUDED
 #include "BinaryTree.h"
-#define N 20
 
-//Define and initialize Stack to store postfix
-char Stack[N];
-int top = -1;
+//create and initialize a stack
+struct node{
+    char data;   //element value
+    struct node *next;  //pointer value to next element
+};
 
-//Push operation to store postfix chars
-void push(char x)
+//create top pointer variable
+struct node *top = 0;
+
+//push operation
+void push(char new_root)
 {
-    char operator, right, left;          //send operator to binary tree
-    if(top == N - 1)
-    {
-        printf("Overflow\n");
+    struct node *newnode;   //create a new node
+    newnode = (struct node *)malloc(sizeof(*newnode));
+    newnode -> data = new_root;    //assign element value to node
+    newnode -> next = top;  //assign pointer value to next element to node
+    top = newnode;      //update value of top pointer variable
+}
+
+//create a node from postfix values
+void createnode(char postfix_value)
+{
+    char operator, operand_1, operand_2;
+
+    struct node *newnode;                               //create a new node
+    newnode = (struct node *)malloc(sizeof(*newnode));      //define new node
+    newnode -> data = postfix_value;                    //assign element value to new node
+
+    if(postfix_value == '+' || postfix_value == '-' || postfix_value == '*' || postfix_value == '/'){
+        operator = newnode -> data;            //assign data of operator node
+
+        //pop operation for operand 1
+        struct node *temp_1;              //create a temp pointer variable
+        temp_1 = top;                 //assign top node address to temp pointer variable
+        operand_1 = top -> data;         //assign data of popping node
+        top = top -> next;
+        free(temp_1);
+
+        //pop operation for operand 2
+        struct node *temp_2;              //create a temp pointer variable
+        temp_2 = top;                 //assign top node address to temp pointer variable
+        operand_2 = top -> data;         //assign data of popping node
+        top = top -> next;
+        free(temp_2);
+
+        struct root *newroot;                  //create root node of binary tree
+        newroot = createroot(operator, operand_1, operand_2);
+        //void push(struct root newroot);
     }else{
-        if(x == "+" || x == "-" || x == "*" || x == "/"){
-            operator = x;
-            right = Stack[top];
-            left = Stack[top - 1];
-            for(int i = top; i >= top - 1; top--)
-                pop();
-            }
-        }else{
-            top++;
-            Stack[top] = x;
-        }
+        newnode -> next = top;              //assign pointer value to next element to new node
+        top = newnode;
     }
 }
 
-//Pop operation to retrieve and send operands to binary tree
-void pop()
+//Display operation
+void display()
 {
-    char right_child;
-    if(top == -1)
-        printf("Underflow\n");
-    else{
-        right_child = Stack[top];
-        top--;
+    struct node *temp;
+    temp = top;
+    while(temp != 0){
+        printf("%c\n",temp -> data);
+        temp = temp -> next;
     }
-    //printf("%d",item);
 }
-
-struct node *root;
-root = create(operator, right, left);
-
 
 #endif // STACK_H_INCLUDED
