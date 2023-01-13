@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1673558468 source:c:\users\chari\documents\c\c-data-structures-and-algorithms\binarytree2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BinaryTree.h"
+
+1673558788 c:\users\chari\documents\c\c-data-structures-and-algorithms\binarytree2\binarytree.h
+
